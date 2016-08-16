@@ -10,7 +10,7 @@ const cors = require('cors');
 const loader = require('lib/wiring/loader');
 
 const corsOptions = {
-  origin: process.env.CLIENT_URL || 'https://tina513.github.io',
+  origin: process.env.CLIENT_URL || 'http://localhost:8080',
 };
 
 const before = (app) => {
