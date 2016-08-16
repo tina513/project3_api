@@ -1,12 +1,7 @@
 'use strict';
 
 const mongoose = require('mongoose');
-let uri;
-if (process.env.NODE_ENV === 'production') {
-  uri = process.env.MONGODB_URI;
-} else {
-  uri = 'mongodb://localhost/survey-market-api';
-}
+const uri = process.env.MONGODB_URI || 'mongodb://localhost/survey-market-api';
 mongoose.Promise = global.Promise;
 mongoose.connect(uri);
 
